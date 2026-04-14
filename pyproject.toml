@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "purejson"
 version = "0.0.1"
-description = "Dict/list end-to-end JSON data layer for nyrkiov3"
+description = "A family of containers or 'dataclasses' with an opinionated Json and Document Database flavor."
 requires-python = ">=3.11"
 dependencies = []
 
