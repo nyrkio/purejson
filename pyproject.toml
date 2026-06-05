@@ -7,7 +7,11 @@ name = "purejson"
 version = "0.0.1"
 description = "A family of containers or 'dataclasses' with an opinionated Json and Document Database flavor."
 requires-python = ">=3.11"
-dependencies = []
+# extjson is the base layer: the one allowed replacement for stdlib
+# json/jsonschema. PureJson Documents serialize and validate through
+# extjson (never stdlib json directly), so purejson depends on it.
+# extjson does NOT import purejson — the dependency is one-way.
+dependencies = ["extjson"]
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]
